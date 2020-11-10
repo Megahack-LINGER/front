@@ -10,6 +10,7 @@ export default function Nav() {
                 <nav>
                     <Link to="/">Home</Link>
                     <Link to="/contato"> Contato</Link>
+                    <Link to="/person">Person</Link>
                 </nav>
             </Switch>
        

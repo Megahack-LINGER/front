@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import firebase from "../../../services/FirebaseServices"
 
 import "./Cadastro.css"
@@ -8,30 +8,42 @@ export default class Cadastro extends React.Component {
 
     state = {
         email: '',
-        password: ''
+        password: '',
+        cadastrado: false
     }
 
     async cadastrar() {
         await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             console.log("Feito")
             console.log(user.user.displayName)
+            this.setState({cadastrado: true})
         }).catch((error) => {
             console.log(error)
         })
     }
+
     render() {
+        if(this.state.cadastrado){
+            return <Redirect to="/" />
+        }else{
         return (<div id="cadastro">
             <h2>Cadastro</h2>
-            <label>
-                Email: 
+            <div>
+                <label>
+                    Email:
                 <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
-            </label>
-            <label>
-                Senha: 
+                </label>
+            </div>
+            <div>
+                <label>
+                    Senha:
                 <input type="password" value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
-            </label>
-            <button type="submit" onClick={async() => await this.cadastrar()}>Cadastro</button>
-            <p>Já tem uma conta? Faça Login: </p><Link to="/login">Login</Link>
+                </label>
+            </div>
+            <div>
+                <button type="submit" onClick={async () => await this.cadastrar()}>Cadastro</button>
+            </div>
+            <span>Já tem uma conta? Faça Login: <Link to="/login">Login</Link></span>
         </div>)
     }
-}
+}}

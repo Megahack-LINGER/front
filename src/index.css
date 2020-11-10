@@ -14,3 +14,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input{
+  border-style: solid;
+  border-color: #1768AC;
+  padding: 8px;
+  margin: 10px 0px 10px 10px;
+  border-radius: 30px;
+  outline-style: none;
+}
+
+button {
+  border-radius: 30px;
+  border-style: solid;
+  background-color:#1768AC;
+  color:white;
+  padding: 10px 40px 10px 40px;
+  border-color: white;
+  outline-style: none;
+}
+
+button:focus{
+  background-color: white;
+  color: #1768AC;
+  border-color: #1768AC;
+  transition-duration: 1s;
+}
+
+span{
+  font-size: 14px;
+}

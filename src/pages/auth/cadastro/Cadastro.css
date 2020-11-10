@@ -2,3 +2,8 @@
     margin-top: 30vh;
     margin-bottom: 22vh;
 }
+#cadastro a{
+    text-decoration: none;
+    color: #1768AC;
+    font-weight: bold;
+}

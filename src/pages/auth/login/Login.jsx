@@ -5,12 +5,12 @@ import firebase from "../../../services/FirebaseServices"
 import "./Login.css"
 
 export default class Login extends React.Component {
-    
+
     state = {
         email: '',
         password: ''
     }
-    
+
     async login() {
         await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             console.log(user.user.displayName)
@@ -19,19 +19,29 @@ export default class Login extends React.Component {
             console.log(error)
         })
     }
-    render(){
+    render() {
         return (<div id="login">
             <h2>Login</h2>
-            <label>
-                Email: 
+
+            <div>
+                <label>
+                    Email:
                 <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
-            </label>
-            <label>
-                Senha: 
+                </label>
+            </div>
+            <div>
+                <label>
+                    Senha:
                 <input type="password" value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
-            </label>
-            <button type="submit" onClick={async () => await this.login()}>Login</button>
-            <p>Já tem uma conta? Faça Login: </p><Link to="/cadastro">Cadastro</Link>
-        </div>)
+                </label>
+
+            </div>
+            <div>
+
+                <button type="submit" onClick={async () => await this.login()}>Logar</button>
+            </div>
+            <span>Não tem uma conta? Crie uma: <Link to="/cadastro">Cadastrar</Link></span>
+        </div>
+        )
     }
 }

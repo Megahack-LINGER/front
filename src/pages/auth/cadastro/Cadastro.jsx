@@ -30,7 +30,7 @@ export default class Cadastro extends React.Component {
                 Senha: 
                 <input type="password" value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
             </label>
-            <button type="submit" onClick={async() => await this.cadastro()}>Cadastro</button>
+            <button type="submit" onClick={async() => await this.cadastrar()}>Cadastro</button>
             <p>Já tem uma conta? Faça Login: </p><Link to="/login">Login</Link>
         </div>)
     }

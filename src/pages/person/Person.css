@@ -1,0 +1,39 @@
+#person #img-perfil {
+  border-radius: 100vw;
+  background-color: #1768ac;
+}
+
+#person input{
+  width: 220px;
+}
+
+@media screen and (max-width: 1920px) {
+  #person #img-perfil {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+@media screen and (max-width: 1620px) {
+  #person #img-perfil {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+@media screen and (max-width: 1220px) {
+  #person #img-perfil {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #person #img-perfil {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #person #img-perfil {
+    width: 70vw;
+    height: 70vw;
+  }
+}

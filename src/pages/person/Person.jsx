@@ -1,9 +1,13 @@
 import React from 'react';
+
+
 import firebase from "../../services/FirebaseServices"
 
+//---- Styles
 import "./Person.css"
 
 export default class Person extends React.Component {
+
     state = {
         email: "",
         photoUrl: "",
@@ -19,7 +23,7 @@ export default class Person extends React.Component {
         })
         window.location.reload()
     }
-    
+
     async componentDidMount() {
         this.setState({
             email: await firebase.auth().currentUser.email != null ? firebase.auth().currentUser.email : "sem email",
@@ -27,6 +31,7 @@ export default class Person extends React.Component {
             name: await firebase.auth().currentUser.displayName != null ? firebase.auth().currentUser.displayName : "sem nome"
         })
     }
+
     render() {
         return (
             <div id="person">
@@ -41,15 +46,16 @@ export default class Person extends React.Component {
                         <div>
                             <label>
                                 Email:
-                            <input type="email" value={this.state.email} onChange={(e) => this.setState({email: e.target.value})}/>
+                            <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Nome:
-                            <input type="text" value={this.state.name} onChange={(n) => this.setState({name: n.target.value})} />
+                            <input type="text" value={this.state.name} onChange={(n) => this.setState({ name: n.target.value })} />
                             </label>
-                        </div><div>
+                        </div>
+                        <div>
                             <label>
                                 Foto de perfil:
                             <input type="file" draggable="true" />

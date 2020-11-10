@@ -1,12 +1,7 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 import "./Home.css";
-
-import image1 from "../../assets/images/maquina-laser.jpg";
-import image2 from "../../assets/images/maquina-sublimacao.jpg";
-import image3 from "../../assets/images/sublimacao.jpg";
 
 function Home() {
   return (

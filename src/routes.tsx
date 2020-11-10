@@ -8,6 +8,7 @@ import Contato from "./pages/contato/Contato";
 import Login from "./pages/auth/login/Login";
 import Cadastro from "./pages/auth/cadastro/Cadastro";
 import Person from "./pages/person/Person";
+import About from "./pages/about/About";
 
 //---- Models
 import Footer from "./pages/models/footer/Footer";
@@ -20,10 +21,11 @@ export default function Routes() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/contato" component={Contato} />
+          <Route exact path="/contact" component={Contato} />
           <Route exact path="/cadastro" component={Cadastro} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/person" component={Person} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </Router>
       <Footer />

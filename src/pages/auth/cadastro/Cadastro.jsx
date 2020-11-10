@@ -16,6 +16,7 @@ export default class Cadastro extends React.Component {
         await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             console.log("Feito")
             console.log(user.user.displayName)
+            localStorage.setItem("email", this.state.email)
             this.setState({cadastrado: true})
         }).catch((error) => {
             console.log(error)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import firebase from "../../../services/FirebaseServices"
 
 import "./Login.css"
@@ -8,21 +8,31 @@ export default class Login extends React.Component {
 
     state = {
         email: '',
-        password: ''
+        password: '',
+        logado: false
     }
 
     async login() {
         await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             console.log(user.user.displayName)
             console.log("feito")
+            localStorage.setItem("email", this.state.email)
+            this.setState({logado: true})
+            window.location.reload()
         }).catch((error) => {
-            console.log(error)
+            if(error.code === "auth/user-not-found"){
+                console.log("Usuário não encontrado")
+            }else{
+                console.log(error)
+            }
         })
     }
     render() {
+        if(this.state.logado){
+            return <Redirect to="/" />
+        }else{
         return (<div id="login">
             <h2>Login</h2>
-
             <div>
                 <label>
                     Email:
@@ -43,5 +53,5 @@ export default class Login extends React.Component {
             <span>Não tem uma conta? Crie uma: <Link to="/cadastro">Cadastrar</Link></span>
         </div>
         )
-    }
+    }}
 }

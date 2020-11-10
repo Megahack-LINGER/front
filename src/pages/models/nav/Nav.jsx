@@ -8,15 +8,15 @@ import "./Nav.css"
 export default function Nav() {
     console.log(localStorage.getItem("email"))
     return <div>
-            <Switch>
-                <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/contact"> Contato</Link>
-                    <Link to="/about">About</Link>
-                    {localStorage.getItem("email") == null ? 
-                    <Link to="/login">Login</Link> : 
-                    <Link to="/person">Person</Link>}
-                </nav>
-            </Switch>
+        <Switch>
+            <nav>
+                <Link to="/">Principal</Link>
+                <Link to="/contact"> Contato</Link>
+                <Link to="/about">Sobre</Link>
+                {localStorage.getItem("email") == null ?
+                    <Link to="/login">Login</Link> :
+                    <Link to="/person">Conta</Link>}
+            </nav>
+        </Switch>
     </div>
 }

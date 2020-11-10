@@ -14,13 +14,12 @@ function Home() {
   return (
 
     <div className="App">
+
+      <br/>
+      <br/>
+      <br/>
+
       <header className="App-topo" >
-          <Link to="/" className="enter-app">
-           Home          
-          </Link>
-          <Link to="/contato" className="enter-app">
-           Contato
-          </Link>
 
           <h2>Encontre a ferramenta que precisa</h2>
           <p>Produza e faça networking</p>

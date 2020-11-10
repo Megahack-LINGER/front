@@ -14,8 +14,6 @@ export default class Login extends React.Component {
 
     async login() {
         await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
-            console.log(user.user.displayName)
-            console.log("feito")
             localStorage.setItem("email", this.state.email)
             this.setState({logado: true})
             window.location.reload()

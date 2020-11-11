@@ -9,13 +9,12 @@ import "./Person.css"
 export default class Person extends React.Component {
 
     state = {
-        email: "guest@linger.com",
+        email: "",
         photoUrl: "",
         name: "",
     }
 
     async update() {
-        await firebase.auth().currentUser.updateEmail(this.state.email)
         await firebase.auth().currentUser.updateEmail(this.state.email)
         await firebase.auth().currentUser.updateProfile({
             "displayName": this.state.name,

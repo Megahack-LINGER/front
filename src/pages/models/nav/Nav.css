@@ -2,8 +2,8 @@ nav{
     background-color:#1768AC;
     width: 100vw;
     box-sizing: border-box;
-    text-align: end;
-    height: 6vh;
+    text-align: left;
+    height: 10vh;
     padding-top: 1.5vh;
 }
 nav a{

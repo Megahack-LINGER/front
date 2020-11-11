@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "axios": "^0.21.0",
     "firebase": "^8.0.1",
     "firebase-tools": "^8.15.1",
     "leaflet": "^1.7.1",

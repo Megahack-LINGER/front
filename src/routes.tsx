@@ -9,6 +9,7 @@ import Login from "./pages/auth/login/Login";
 import Cadastro from "./pages/auth/cadastro/Cadastro";
 import Person from "./pages/person/Person";
 import About from "./pages/about/About";
+import Busca from "./pages/busca/Busca";
 
 //---- Models
 import Footer from "./pages/models/footer/Footer";
@@ -26,6 +27,7 @@ export default function Routes() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/person" component={Person} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/busca" component={Busca} />
         </Switch>
       </Router>
       <Footer />

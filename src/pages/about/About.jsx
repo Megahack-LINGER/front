@@ -5,7 +5,7 @@ export default class About extends React.Component {
         return (<div>
             <main>
               <div>
-                <h1>LINGER apresenta:</h1>
+                <h1>Sobre a LINGER:</h1>
                 <h1>TOOL4U</h1>
                 <p>Uma plataforma de uso colaborativo de ferramentas e máquinas.</p>
               </div>
@@ -50,6 +50,12 @@ export default class About extends React.Component {
               
               <div>
                 <h1>Sobre Nós</h1>
+		<p>Ivo - Marketing</p>
+		<p>José - Business</p>
+		<p>Leonardo - Engenharia</p>
+		<p>Nicolas - Desing</p>
+		<p>Ramon - Developer</p>
+
               </div>
             </main>
           </div>)

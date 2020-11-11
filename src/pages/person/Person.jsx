@@ -9,7 +9,7 @@ import "./Person.css"
 export default class Person extends React.Component {
 
     state = {
-        email: "",
+        email: "guest@linger.com",
         photoUrl: "",
         name: "",
     }

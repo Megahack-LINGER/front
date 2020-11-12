@@ -1,10 +1,10 @@
 
-> front@0.1.0 start /home/ec2-user/front2
+> front@0.1.0 start /app/lym/front2
 > react-scripts start
 
 [34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.31.25.255/
 [34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
-[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/ec2-user/front2/public
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /app/lym/front2/public
 [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
 Starting the development server...
 
@@ -30,9 +30,175 @@ Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 Compiling...
+Failed to compile.
+
+./src/routes.tsx
+SyntaxError: /app/lym/front2/src/routes.tsx: Identifier 'Cadastro' has already been declared (14:7)
+
+  12 | import Busca from "./pages/busca/Busca";
+  13 | 
+> 14 | import Cadastro from "./pages/cadastro/Cadastro";
+     |        ^
+  15 | import Checkout from "./pages/checkout/Checkout";
+  16 | import Devolucao from "./pages/devolucao/Devolucao";
+  17 | import Termos from "./pages/termos/Termos";
+Compiling...
+Failed to compile.
+
+./src/routes.tsx
+SyntaxError: /app/lym/front2/src/routes.tsx: Identifier 'Cadastro' has already been declared (14:7)
+
+  12 | import Busca from "./pages/busca/Busca";
+  13 | 
+> 14 | import Cadastro from "./pages/cadastro/Cadastro";
+     |        ^
+  15 | import Checkout from "./pages/checkout/Checkout";
+  16 | import Devolucao from "./pages/devolucao/Devolucao";
+  17 | import Termos from "./pages/termos/Termos";
+Compiling...
+Failed to compile.
+
+./src/pages/devolucao/Devolucao.tsx
+Module not found: Can't resolve './Devolução.css' in '/app/lym/front2/src/pages/devolucao'
+Compiling...
+Failed to compile.
+
+./src/routes.tsx
+Module not found: Can't resolve './pages/dashboard/Dashboard' in '/app/lym/front2/src'
+Compiling...
+Compiled with warnings.
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+src/routes.tsx
+  Line 16:8:  'Checkout' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/pages/contato/Contato.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/pages/contato/Contato.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+src/routes.tsx
+  Line 16:8:  'Checkout' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/pages/checkout/Checkout.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/pages/contato/Contato.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/dashboard/Dashboard.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 3:10:  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled with warnings.
+
+src/pages/contato/Contato.tsx
+  Line 2:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/home/Home.tsx
+  Line 3:10:  'FiArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 10:8:  'image1' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 11:8:  'image2' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 12:8:  'image3' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 14:8:  'person1' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 15:8:  'logo1' is defined but never used         @typescript-eslint/no-unused-vars
+
+src/pages/models/nav/Nav.jsx
+  Line 3:27:  'Router' is defined but never used  no-unused-vars
+
+src/pages/person/Person.jsx
+  Line 39:25:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
 Compiled successfully!
 Compiling...
 Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Files successfully emitted, waiting for typecheck results...
+Compiled successfully!
+Compiling...
 Compiled successfully!
 Compiling...
 Compiled successfully!

@@ -18,7 +18,7 @@ export default class About extends React.Component {
         <br />
 
         <img
-          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/tool4u.png"
+          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/logo-tool4u1.png"
           className="App-image"
           alt="logo"
           width="300"

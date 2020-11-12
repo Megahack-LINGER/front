@@ -21,6 +21,20 @@
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
+  <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "9568ef72-953b-402e-8811-fceaf94d3f39", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "09899cd4-714e-48f3-ad31-dc1528ca06e3", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+  </script>
+
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');

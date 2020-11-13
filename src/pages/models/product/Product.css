@@ -73,10 +73,13 @@
   }
   #product #price {
     margin-top: -10px;
-    margin-left: 120px;
+    margin-left: 170px;
+    z-index: 1;
+    float: inline-end;
   }
   #product #image-product {
-    width: 20vw;
-    height: 20vw;
+    max-width: 30vw;
+    max-height: 20vw;
+    border-radius: 10px;
   }
 }

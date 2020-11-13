@@ -5,7 +5,7 @@ export default class About extends React.Component {
     return (<div>
       <main>
         <img
-          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/Banners.jpg"
+          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/BANNER_FERRAMENTA.jpg"
           className="App-image"
           alt="logo"
           width="100%"

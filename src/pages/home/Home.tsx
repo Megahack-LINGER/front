@@ -18,6 +18,12 @@ import Product from "../models/product/Product";
 function Home() {
   return (
     <div>
+        <img
+          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/BANNER_CORTADORA_A_LASER.jpg"
+          alt="logo-linger"
+          width="100%"
+        />
+  
       <figure>
         <img
           src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/logo-linger.png"

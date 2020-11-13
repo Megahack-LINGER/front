@@ -7,6 +7,13 @@ import "./Contato.css";
 export default function Contato() {
   return (
     <div>
+       <img
+          src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/BANNER_IMPRESSORA_3D.jpg"
+          className="App-image"
+          alt="logo"
+          width="100%"
+        />
+
       <h1>Contato</h1>
       <p>Mais informações entrem em contato</p>
       <strong>Opções</strong>

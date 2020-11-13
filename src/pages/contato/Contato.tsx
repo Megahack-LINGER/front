@@ -16,6 +16,18 @@ export default function Contato() {
 
       <h1>Contato</h1>
       <p>Mais informações entrem em contato</p>
+      <strong>Email: linger@gmail.com</strong>
+
+      <br />
+      <br />
+      <Link to="/termos">Termos de uso e regra de garantia</Link>
+      <br />
+      <Link to="/politica">Política de privacidade</Link>
+      <br />
+      <br />
+      <br />
+
+      <h1>Área do usuário</h1>
       <strong>Opções</strong>
       <br />
       <Link to="/dashboard">Painel Geral do usuário</Link>
@@ -25,10 +37,6 @@ export default function Contato() {
       <Link to="/checkout">Checkout de empréstimo</Link>
       <br />
       <Link to="/devolucao">Devolução o equipamento</Link>
-      <br />
-      <Link to="/termos">Termos de uso e regra de garantia</Link>
-      <br />
-      <Link to="/politica">Política de privacidade</Link>
       <br />
     </div>
   );

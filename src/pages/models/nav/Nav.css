@@ -1,9 +1,10 @@
 nav {
-  background-color: #1768ac;
+  #background-color: #1768ac;
+  background-color:  #0085FF;
   width: 100vw;
   box-sizing: border-box;
   text-align: end;
-  height: 6vh;
+  height: 8vh;
   padding-top: 1.5vh;
 }
 

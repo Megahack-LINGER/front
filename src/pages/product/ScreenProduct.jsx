@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, Circle } from "react-leaflet";
 import React from 'react';
 
 import "leaflet/dist/leaflet.css"
@@ -23,16 +23,12 @@ export default class Produto extends React.Component {
         return <div>
             <center>
                 produto
-                <MapContainer center={[this.state.lat, this.state.lon]} zoom={12} style={{ width: "60vw", height: "60vh" }}>
+                <MapContainer center={[this.state.lat, this.state.lon]} zoom={12} style={{ width: "60vw", height: "60vh", borderRadius: "20px" }} >
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
-                    <Marker position={[this.state.lat, this.state.lon]}>
-                        <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
-                        </Popup>
-                    </Marker>
+                    <Circle center={[this.state.lat, this.state.lon]} radius={300} />
                 </MapContainer>
 
             </center>

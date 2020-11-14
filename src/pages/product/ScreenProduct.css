@@ -1,0 +1,9 @@
+#screen-product{
+    color: #1768ac;
+}
+
+#screen-product #image-produto{
+    border-radius: 20px;
+    width: 40vw;
+    height: 30vh;
+}

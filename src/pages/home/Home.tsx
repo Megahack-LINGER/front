@@ -1,6 +1,5 @@
 //---- Packages
 import React from "react";
-import { Link } from "react-router-dom";
 
 //---- Styles
 import "./Home.css";
@@ -37,37 +36,56 @@ export default class Home extends React.Component<State> {
         `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=0413d527b0264812850b4ee3eeddff13`
       )
     ).data;
-    console.log(api["results"][0]["components"]["city_district"]);
-    this.setState({ city: api["results"][0]["components"]["city_district"] });
-    localStorage.setItem("city", api["results"][0]["components"]["city_district"])
-    localStorage.setItem("lat", `${lat}`)
-    localStorage.setItem("lon", `${lon}`)
+    this.setState({
+      city: await api["results"][0]["components"]["city_district"],
+    });
+    console.log(
+      "Cidade onde estou pela API: " +
+        (await api["results"][0]["components"]["city_district"])
+    );
+    localStorage.setItem(
+      "city",
+      await api["results"][0]["components"]["city_district"]
+    );
+    localStorage.setItem("lat", `${lat}`);
+    localStorage.setItem("lon", `${lon}`);
+
+    await this.getDatas();
   }
 
   async getLocation() {
     navigator.geolocation.getCurrentPosition(async (success) => {
+      await this.getCity(success.coords.latitude, success.coords.longitude);
       console.log(success.coords.latitude);
       console.log(success.coords.longitude);
-      await this.getCity(success.coords.latitude, success.coords.longitude);
     });
   }
 
   async getDatas() {
-    await this.getLocation();
     var datas = await firebase
       .firestore()
       .collection("products")
       .where("cidade", "==", this.state.city)
       .get();
-    datas.forEach((item) => {
+
+    console.log("Cidade onde estou: " + this.state.city);
+    datas.forEach(async (item) => {
       this.setState({ products: [...this.state.products, item.data()] });
-      console.log(this.state.products);
     });
+    console.log(this.state.products.length);
   }
 
-  async componentWillUpdate() {
-    if (this.state.city == "") {
-      await this.getDatas();
+  async componentDidMount() {
+    if (window.screen.width >= 400) {
+      if (this.state.city == "") {
+        await this.getLocation();
+      }
+    } else {
+      var datas = await firebase.firestore().collection("products").get();
+      datas.forEach(async (item) => {
+        this.setState({ products: [...this.state.products, item.data()] });
+      });
+      console.log(this.state.products.length);
     }
   }
 
@@ -98,8 +116,6 @@ export default class Home extends React.Component<State> {
             );
           })}
         </div>
-
-        <Link to="/busca">Busca avançada</Link>
       </div>
     );
   }

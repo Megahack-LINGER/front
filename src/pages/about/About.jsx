@@ -6,7 +6,6 @@ export default class About extends React.Component {
       <main>
         <img
           src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/BANNER_IMPRESSORA_3D.jpg"
-          className="App-image"
           alt="logo"
           width="100%"
         />
@@ -19,7 +18,6 @@ export default class About extends React.Component {
 
         <img
           src="https://raw.githubusercontent.com/Megahack-LINGER/docs/main/imagens/logo-tool4u1.png"
-          className="App-image"
           alt="logo"
           width="300"
         />

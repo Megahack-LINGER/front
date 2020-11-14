@@ -7,8 +7,6 @@ import "./Busca.css";
 import mapMarkerImg from "../../assets/images/map-marker.svg";
 import Product from "../models/product/Product";
 
-
-
 export default class Contato extends React.Component {
 
   constructor(props) {

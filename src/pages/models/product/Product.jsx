@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Product.css";
 
-import { Link, Redirect, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default class Product extends React.Component {

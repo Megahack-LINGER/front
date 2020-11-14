@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 
 import firebase from "../../services/FirebaseServices"
@@ -12,22 +13,44 @@ export default class Person extends React.Component {
         email: "",
         photoUrl: "",
         name: "",
+        linkPhoto: ""
+    }
+
+    async addPhoto(e) {
+       await firebase.storage().ref("photoUsers").child(firebase.auth().currentUser.uid).put(e.target.files[0]).on("state_changed", snapshot => {
+            console.log(snapshot)
+        }, error => {
+            console.log(error)
+        }, async () => {
+            console.log(".totalBytes")
+            await this.fireStorage()
+        })
+    }
+
+    async fireStorage() {
+        await firebase.storage().ref("photoUsers/" + firebase.auth().currentUser.uid).getDownloadURL().then(async image => {
+            console.log(image)
+            localStorage.setItem("image", image)
+            this.setState({ linkPhoto: image })
+            await this.update()
+        })
     }
 
     async update() {
         await firebase.auth().currentUser.updateEmail(this.state.email)
+        localStorage.setItem("name", this.state.name)
         await firebase.auth().currentUser.updateProfile({
             "displayName": this.state.name,
-            "photoURL": "https://cdn.pixabay.com/photo/2020/11/04/19/22/windmill-5713337__340.jpg"
+            "photoURL": this.state.linkPhoto
         })
         window.location.reload()
-    }
+        }
 
     async componentWillMount() {
         this.setState({
-            email: await firebase.auth().currentUser.email != null ? firebase.auth().currentUser.email : "sem email",
-            photoUrl: await firebase.auth().currentUser.photoURL != null ? firebase.auth().currentUser.photoURL : "sem image",
-            name: await firebase.auth().currentUser.displayName != null ? firebase.auth().currentUser.displayName : "sem nome"
+            email: localStorage.getItem("email") != null ? localStorage.getItem("email") : await firebase.auth().currentUser.email,
+            photoUrl: localStorage.getItem("image") != null ? localStorage.getItem("image") : await firebase.auth().currentUser.photoURL,
+            name: localStorage.getItem("name") != null ? localStorage.getItem("name") : await firebase.auth().currentUser.displayName
         })
     }
 
@@ -57,7 +80,7 @@ export default class Person extends React.Component {
                         <div>
                             <label>
                                 Foto de perfil:
-                            <input type="file" draggable="true" />
+                            <input type="file" draggable="true" onChange={async (e) => await this.addPhoto(e)} />
                             </label>
                         </div>
                     </div>

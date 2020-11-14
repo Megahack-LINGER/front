@@ -15,41 +15,45 @@ export default class Login extends React.Component {
     async login() {
         await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             localStorage.setItem("email", this.state.email)
-            this.setState({logado: true})
+            this.setState({ logado: true })
             window.location.reload()
         }).catch((error) => {
-            if(error.code === "auth/user-not-found"){
+            if (error.code === "auth/user-not-found") {
                 console.log("Usuário não encontrado")
-            }else{
+            } else {
                 console.log(error)
             }
         })
     }
     render() {
-        if(this.state.logado){
+        if (this.state.logado) {
             return <Redirect to="/" />
-        }else{
-        return (<div id="login">
-            <h2>Login</h2>
-            <div>
-                <label>
-                    Email:
-                <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Senha:
-                <input type="password" value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
-                </label>
+        } else {
+            return (<div id="login">
+                <h2>Login</h2>
+                <div>
+                    <form>
 
-            </div>
-            <div>
+                        <label>
+                            Email:
+                <input type="email" required value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                        </label>
 
-                <button type="submit" onClick={async () => await this.login()}>Logar</button>
+                        <br />
+
+                        <label>
+                            Senha:
+                <input type="password" required value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
+                        </label>
+
+                        <div>
+                            <button type="submit" onClick={async () => await this.login()}>Logar</button>
+                        </div>
+                    </form>
+                </div>
+                <span>Não tem uma conta? Crie uma: <Link to="/cadastro">Cadastrar</Link></span>
             </div>
-            <span>Não tem uma conta? Crie uma: <Link to="/cadastro">Cadastrar</Link></span>
-        </div>
-        )
-    }}
+            )
+        }
+    }
 }

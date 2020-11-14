@@ -15,7 +15,7 @@ export default class Cadastro extends React.Component {
     async cadastrar() {
         await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
             localStorage.setItem("email", this.state.email)
-            this.setState({cadastrado: true})
+            this.setState({ cadastrado: true })
             window.location.reload()
         }).catch((error) => {
             console.log(error)
@@ -23,27 +23,30 @@ export default class Cadastro extends React.Component {
     }
 
     render() {
-        if(this.state.cadastrado){
+        if (this.state.cadastrado) {
             return <Redirect to="/" />
-        }else{
-        return (<div id="cadastro">
-            <h2>Cadastro</h2>
-            <div>
-                <label>
-                    Email:
-                <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Senha:
-                <input type="password" value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
-                </label>
-            </div>
-            <div>
-                <button type="submit" onClick={async () => await this.cadastrar()}>Cadastro</button>
-            </div>
-            <span>Já tem uma conta? Faça Login: <Link to="/login">Login</Link></span>
-        </div>)
+        } else {
+            return (<div id="cadastro">
+                <h2>Cadastro</h2>
+                <div>
+                    <form>
+                        <label>
+                            Email:
+                <input type="email" required value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                        </label>
+                        <br />
+                        <label>
+                            Senha:
+                <input type="password" required value={this.state.password} onChange={(p) => this.setState({ password: p.target.value })} />
+                        </label>
+
+                        <div>
+                            <button type="submit" onClick={async () => await this.cadastrar()}>Cadastro</button>
+                        </div>
+                    </form>
+                </div>
+                <span>Já tem uma conta? Faça Login: <Link to="/login">Login</Link></span>
+            </div>)
+        }
     }
-}}
+}

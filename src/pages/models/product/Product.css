@@ -1,7 +1,7 @@
 #product {
   border: 1px solid #1768ac;
   border-radius: 24px;
-  height: 45vh;
+  height: 65vh;
   width: 20vw;
   margin: 20px;
   text-align: start;
@@ -28,7 +28,11 @@
 
 @media screen and (max-width: 1920px) {
   #product {
+<<<<<<< HEAD
     height: 44vh;
+=======
+    height: 40vw;
+>>>>>>> d427310f30f39d46ec3586566a7f38b404ecd955
     width: 20vw;
     margin: 10px;
   }
@@ -37,6 +41,7 @@
     height: 12vw;
   }
   #product #price {
+<<<<<<< HEAD
     margin-top:0px;
     margin-left: 13vw;
   }
@@ -54,12 +59,20 @@
   #product #price {
     margin-top: 0px;
     margin-left: 8vw;
+=======
+    margin-left: 20px;
+>>>>>>> d427310f30f39d46ec3586566a7f38b404ecd955
   }
 }
 @media screen and (max-width: 1220px) {
   #product {
+<<<<<<< HEAD
     height: 40vh;
     width: 32vw;
+=======
+    height: 26vh;
+    width: 70vw;
+>>>>>>> d427310f30f39d46ec3586566a7f38b404ecd955
     margin: 10px;
   }
   #product #image-product {
@@ -85,7 +98,7 @@
 }
 @media screen and (max-width: 500px) {
   #product {
-    height: 26vh;
+    height: 46vh;
     width: 50vw;
     margin: 10px;
   }

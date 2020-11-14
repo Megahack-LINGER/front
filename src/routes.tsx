@@ -10,6 +10,7 @@ import Cadastro from "./pages/auth/cadastro/Cadastro";
 import Person from "./pages/person/Person";
 import About from "./pages/about/About";
 import Busca from "./pages/busca/Busca";
+import Admin from "./pages/admin/Admin";
 
 import Dashboard from "./pages/dashboard/Dashboard";
 import Registro from "./pages/registro/Registro";
@@ -35,6 +36,7 @@ export default function Routes() {
           <Route exact path="/person" component={Person} />
           <Route exact path="/about" component={About} />
           <Route exact path="/busca" component={Busca} />
+          <Route exact path="/admin" component={Admin} />
           
 	  <Route exact path="/dashboard" component={Dashboard} />
 	  <Route exact path="/registro" component={Registro} />

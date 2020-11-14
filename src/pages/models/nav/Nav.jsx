@@ -25,6 +25,7 @@ export default function Nav() {
                 {localStorage.getItem("email") == null ?
                     <Link to="/login">Login</Link> :
                     <Link to="/person">Conta</Link>}
+                <Link to="/admin"> Admin</Link>
             </nav>
         </Switch>
     </div>

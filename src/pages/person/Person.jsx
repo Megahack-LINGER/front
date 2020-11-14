@@ -23,7 +23,7 @@ export default class Person extends React.Component {
         window.location.reload()
     }
 
-    async componentDidMount() {
+    async componentWillMount() {
         this.setState({
             email: await firebase.auth().currentUser.email != null ? firebase.auth().currentUser.email : "sem email",
             photoUrl: await firebase.auth().currentUser.photoURL != null ? firebase.auth().currentUser.photoURL : "sem image",

@@ -22,7 +22,7 @@ export default class Product extends React.Component {
       <div id="product">
         <center>
           <figure>
-            <img id="image-product" src={this.state.image[0]} alt={this.state.image[0]} />
+            <img id="image-product" src={this.state.image[0]}alt="{this.state.image[0]}" />
           </figure>
 
           <hr color="#1768ac" />

@@ -1,9 +1,25 @@
-#screen-product{
-    color: #1768ac;
+#screen-product {
+  color: #1768ac;
 }
 
-#screen-product #image-produto{
+#screen-product #image-produto {
+  border-radius: 20px;
+  width: 40vw;
+  height: 30vh;
+}
+
+@media screen and (max-width: 1920px) {
+  .leaflet-container {
     border-radius: 20px;
-    width: 40vw;
-    height: 30vh;
+    width: 60vw;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .leaflet-container {
+    border-radius: 20px;
+    width: 90vw;
+    height: 40vh;
+  }
 }

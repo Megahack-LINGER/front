@@ -1,8 +1,5 @@
-hr{
-    color: red;
+#row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
 }
-
-#row{
-    flex-direction: row;
-}
-

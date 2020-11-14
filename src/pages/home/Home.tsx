@@ -20,6 +20,8 @@ interface State {
     cep_origem: string;
     image: Array<string>;
     price: number;
+    latitude: number;
+    longetude: number;
   }[];
   city: string;
 }
@@ -39,6 +41,8 @@ export default class Home extends React.Component<State> {
     console.log(api["results"][0]["components"]["city_district"]);
     this.setState({ city: api["results"][0]["components"]["city_district"] });
     localStorage.setItem("city", api["results"][0]["components"]["city_district"])
+    localStorage.setItem("lat", `${lat}`)
+    localStorage.setItem("lon", `${lon}`)
   }
 
   async getLocation() {
@@ -88,6 +92,8 @@ export default class Home extends React.Component<State> {
                 subtitle={item.subtitle}
                 price={item.price}
                 image={item.image}
+                lat={item.latitude}
+                lon={item.longetude}
                 key={item.id}
               />
             );

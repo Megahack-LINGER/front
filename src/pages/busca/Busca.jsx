@@ -29,8 +29,8 @@ export default class Contato extends React.Component {
       try {
         var city = localStorage.getItem("city")
         var data = (await firebase.firestore().collection("products").where("title", "==", splitado[1]).where("cidade", "==", city).get()).docs[0].data()
-        console.log(data)
         this.setState({ produto: data });
+        console.log(data)
       } catch (e) {
         console.log(e)
       }
@@ -77,6 +77,8 @@ export default class Contato extends React.Component {
             subtitle={this.state.produto.subtitle}
             price={this.state.produto.price}
             image={this.state.produto.image}
+            lat={this.state.produto.latitude}
+            lon={this.state.produto.longetude}
             key={this.state.produto.id}
           />
 

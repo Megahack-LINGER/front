@@ -91,7 +91,7 @@
 @media screen and (max-width: 500px) {
   #product {
     height: 26vh;
-    width: 50vw;
+    width: 44vw;
     margin: 10px;
   }
   #product #price {
@@ -101,8 +101,8 @@
     float: inline-end;
   }
   #product #image-product {
-    max-width: 30vw;
-    max-height: 20vw;
+    max-width: 40vw;
+    max-height: 8vh;
     border-radius: 10px;
   }
 }

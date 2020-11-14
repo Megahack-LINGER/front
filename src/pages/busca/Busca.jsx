@@ -27,7 +27,8 @@ export default class Contato extends React.Component {
       console.log(await splitado)
 
       try {
-        var data = (await firebase.firestore().collection("products").where("title", "==", splitado[1]).get()).docs[0].data()
+        var city = localStorage.getItem("city")
+        var data = (await firebase.firestore().collection("products").where("title", "==", splitado[1]).where("cidade", "==", city).get()).docs[0].data()
         console.log(data)
         this.setState({ produto: data });
       } catch (e) {
@@ -58,12 +59,12 @@ export default class Contato extends React.Component {
         </div>
 
         <aside>
+
           <header>
             <img src={mapMarkerImg} alt="Happy" />
 
             <p>Alguém precisa de uma ferramenta :)</p>
           </header>
-
 
         </aside>
         <hr />

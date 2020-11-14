@@ -38,6 +38,7 @@ export default class Home extends React.Component<State> {
     ).data;
     console.log(api["results"][0]["components"]["city_district"]);
     this.setState({ city: api["results"][0]["components"]["city_district"] });
+    localStorage.setItem("city", api["results"][0]["components"]["city_district"])
   }
 
   async getLocation() {

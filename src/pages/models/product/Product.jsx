@@ -29,7 +29,7 @@ export default class Product extends React.Component {
 
           <h4 id="title">{this.state.title}</h4>
           <p id="subtitle">{this.state.subtitle}</p>
-          <p id="price">R${this.state.price}</p>
+          <p id="price">R${this.state.price} por hora</p>
         </center>
       </div>
     );

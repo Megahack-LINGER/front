@@ -10,6 +10,8 @@
 #product #image-product {
   width: 12vw;
   height: 12vw;
+  border-radius: 10px;
+
 }
 
 #product #subtitle {
@@ -26,7 +28,7 @@
 
 @media screen and (max-width: 1920px) {
   #product {
-    height: 20vw;
+    height: 44vh;
     width: 20vw;
     margin: 10px;
   }
@@ -35,18 +37,34 @@
     height: 12vw;
   }
   #product #price {
-    margin-left: 290px;
+    margin-top:0px;
+    margin-left: 13vw;
+  }
+}
+@media screen and (max-width: 1366px) {
+  #product {
+    height: 44vh;
+    width: 20vw;
+    margin: 10px;
+  }
+  #product #image-product {
+    width: 12vw;
+    height: 20vh;
+  }
+  #product #price {
+    margin-top: 0px;
+    margin-left: 8vw;
   }
 }
 @media screen and (max-width: 1220px) {
   #product {
-    height: 26vh;
-    width: 50vw;
+    height: 40vh;
+    width: 32vw;
     margin: 10px;
   }
   #product #image-product {
+    height: 20vh;
     width: 20vw;
-    height: 20vw;
   }
   #product #price {
     margin-top: -10px;
@@ -55,14 +73,14 @@
 }
 @media screen and (max-width: 800px) {
   #product {
-    height: 26vh;
-    width: 50vw;
+    height: 36vh;
+    width: 30vw;
     margin: 10px;
   }
-
+  
   #product #image-product {
-    width: 20vw;
-    height: 20vw;
+    height: 16vh;
+    width: 12vw;
   }
 }
 @media screen and (max-width: 500px) {
@@ -72,8 +90,8 @@
     margin: 10px;
   }
   #product #price {
-    margin-top: -10px;
-    margin-left: 170px;
+    margin-top: 0px;
+    margin-left: 16vw;
     z-index: 1;
     float: inline-end;
   }
